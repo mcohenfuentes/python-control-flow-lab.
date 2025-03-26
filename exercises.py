@@ -41,19 +41,19 @@
 # - Use `int()` to convert the input to an integer. Ensure to handle any conversion errors gracefully.
 # - Use a conditional statement to check if the age meets the minimum voting age requirement.
 
-def check_voting_eligibility():
-    eligibility = '18'
-    num = int(eligibility)
-    age = input('Please enter your age: ')
+# def check_voting_eligibility():
+#     eligibility = '18'
+#     num = int(eligibility)
+#     age = input('Please enter your age: ')
 
-    if age >= eligibility:
-        print("you can vote")
-    else:
-        print("You cannot vote")
-    # Your control flow logic goes here
+#     if age >= eligibility:
+#         print("you can vote")
+#     else:
+#         print("You cannot vote")
+#     # Your control flow logic goes here
 
-# Call the function
-check_voting_eligibility()
+# # Call the function
+# check_voting_eligibility()
 
 
 # Exercise 3: Calculate Dog Years
@@ -75,7 +75,15 @@ check_voting_eligibility()
 # - Apply conditional logic to perform the correct age calculation based on the dog's age.
 
 def calculate_dog_years():
-    # Your control flow logic goes here
+     age = input("Input a dog's age:")
+     age = int(age)
+
+     if age <= 2:
+         dog_years = age * 10
+     else:
+         dog_years = 20 + (age -2) * 7 
+
+     print("The dog's age in dog years is", dog_years)
 
 # Call the function
 calculate_dog_years()
