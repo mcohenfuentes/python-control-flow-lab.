@@ -15,15 +15,17 @@
 # - Utilize the `in` operator to check for vowels.
 # - Ensure to provide feedback for non-alphabetical or invalid entries.
 
-# def check_letter():
-#     letter = input('please enter letter (a-z or A-Z): ').lower()
-#     if letter in "aeiou":
-#         print(f'the letter {letter} is a vowel')
-#     else: 
-#         print(f'the letter {letter} is a consonant')
+def check_letter():
+    letter = input('please enter letter (a-z or A-Z): ').lower()
+    if letter in "aeiou":
+        print(f'the letter {letter} is a vowel')
+    elif letter in "bcdfghjklmnpqrstvwxyz": 
+        print(f'the letter {letter} is a consonant')
+    else:
+        print('Anything else')
 
-# # Call the function
-# check_letter()
+# Call the function
+check_letter()
 
 # Exercise 2: Old enough to vote?
 #
@@ -41,19 +43,19 @@
 # - Use `int()` to convert the input to an integer. Ensure to handle any conversion errors gracefully.
 # - Use a conditional statement to check if the age meets the minimum voting age requirement.
 
-# def check_voting_eligibility():
-#     eligibility = '18'
-#     num = int(eligibility)
-#     age = input('Please enter your age: ')
+def check_voting_eligibility():
+    eligibility = '18'
+    num = int(eligibility)
+    age = int(input('Please enter your age: '))
 
-#     if age >= eligibility:
-#         print("you can vote")
-#     else:
-#         print("You cannot vote")
-#     # Your control flow logic goes here
+    if age >= num:
+        print("you can vote")
+    else:
+        print("You cannot vote")
+    # Your control flow logic goes here
 
-# # Call the function
-# check_voting_eligibility()
+# Call the function
+check_voting_eligibility()
 
 
 # Exercise 3: Calculate Dog Years
@@ -141,22 +143,22 @@
 # - Adjust the season based on the day of the month when needed.
 # - Ensure to validate input formats and handle unexpected inputs gracefully.
 
-def determine_season():
-    month = input('Enter the month of the year (Jan - Dec): ')
-    day = int(input('Enter the day of the month: '))
-    if (month in ["jan", "feb"]) or (month == "dec" and day >= 21) or (month == "mar" and day <= 19):
-        season = 'Winter'
-    elif (month in ['apr', 'may']) or (month == 'mar' and day >= 20) or (month == 'jun' and day <= 20):
-        season = 'Spring'
-    elif (month in ['jul', 'aug']) or (month == 'jun' and day >= 21) or (month == "sep" and day <= 21):
-        season = 'Summer'
-    elif (month in ["oct", 'nov']) or (month == "sep" and day >= 22) or (month == "dec" and day <= 20):
-        season = 'Fall'
-    else:
-        season = "None"
-    print(f'{month} {day} is in {season}.')
+# def determine_season():
+#     month = input('Enter the month of the year (Jan - Dec): ')
+#     day = int(input('Enter the day of the month: '))
+#     if (month in ["jan", "feb"]) or (month == "dec" and day >= 21) or (month == "mar" and day <= 19):
+#         season = 'Winter'
+#     elif (month in ['apr', 'may']) or (month == 'mar' and day >= 20) or (month == 'jun' and day <= 20):
+#         season = 'Spring'
+#     elif (month in ['jul', 'aug']) or (month == 'jun' and day >= 21) or (month == "sep" and day <= 21):
+#         season = 'Summer'
+#     elif (month in ["oct", 'nov']) or (month == "sep" and day >= 22) or (month == "dec" and day <= 20):
+#         season = 'Fall'
+#     else:
+#         season = "None"
+#     print(f'{month} {day} is in {season}.')
 
 
 
-# Call the function
-determine_season()
+# # Call the function
+# determine_season()
